@@ -61,7 +61,8 @@ def calc_f1_full(list_of_true_dict, list_of_pred_dict, class_labels, labels_to_n
     return metrics_dict
 
 
-def evaluate_f1(model, data_loader, device, class_labels, labels_to_names_map, iou_thresholds=np.arange(0.5, 0.95, 0.05), dataset_name=""):
+def evaluate_f1(model, data_loader, device, class_labels, labels_to_names_map,
+                iou_thresholds=np.arange(0.5, 0.95, 0.05), dataset_name=""):
     print(f'Evaluating on {dataset_name}...')
     y_preds = []
     y_trues = []
@@ -78,9 +79,9 @@ def evaluate_f1(model, data_loader, device, class_labels, labels_to_names_map, i
         y_trues.extend(targets)
 
     metrics['small_objects'] = calc_f1_full(y_trues, y_preds, class_labels, labels_to_names_map, iou_thresholds,
-                                            area_min=0, area_max=32 * 32)
+                                            device, area_min=0, area_max=32 * 32)
     metrics['large_objects'] = calc_f1_full(y_trues, y_preds, class_labels, labels_to_names_map, iou_thresholds,
-                                            area_min=96 * 96, area_max=1000 * 1000)
+                                            device, area_min=96 * 96, area_max=1000 * 1000)
 
     print(f"{dataset_name} F1:    small objects: {metrics['small_objects']['F1_mean_by_class']['total']} \
     large objects: {metrics['large_objects']['F1_mean_by_class']['total']}")
