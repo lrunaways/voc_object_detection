@@ -7,12 +7,16 @@
 4) Сравнить метрики для больших и малых объектов
 
 ---
-Колаб с базовым EDA: https://colab.research.google.com/drive/174LtcsBTerkeja3A0ZjnQhJ-BluVGV4q
+Колаб с базовым EDA: 
+</br>https://colab.research.google.com/drive/174LtcsBTerkeja3A0ZjnQhJ-BluVGV4q
+</br>
+</br>Логи обучения и что всё запускается и обучается можно посмотреть в колабе:
+</br>https://colab.research.google.com/drive/1oLNcKmG_5z0mXeYrZlDIWRsTn7DmbN26?usp=sharing
+</br>
+</br>
 
 1) Взял стандартную имплементацию Faster R-CNN в torchvision с предтренированным VGG16 и заменил пулинг слой на кастомный.
    Для трейна взял 500 примеров, а для валидации 200 и обучался условно, на 5 эпох.
-   </br>
-   </br>Логи обучения и что всё запускается и обучается можно посмотреть в колабе: https://colab.research.google.com/drive/1oLNcKmG_5z0mXeYrZlDIWRsTn7DmbN26?usp=sharing
    </br>
    </br>Скрипт для запуска обучения в voc_object_detection/train.py
    </br>Создание модели в voc_object_detection/models/faster_rcnn.py
