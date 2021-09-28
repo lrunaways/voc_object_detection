@@ -1,6 +1,6 @@
-from voc_object_detection.dataset.data_utils import get_voc_dataloader
-from voc_object_detection.models.faster_rcnn import get_faster_rcnn_model
-from voc_object_detection.training.training_loop import training_loop
+from dataset.data_utils import get_voc_dataloader
+from models.faster_rcnn import get_faster_rcnn_model
+from training.training_loop import training_loop
 
 
 if __name__ == '__main__':
