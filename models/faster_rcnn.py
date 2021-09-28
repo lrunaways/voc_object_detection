@@ -2,7 +2,7 @@ import torchvision
 from torchvision.models.detection import FasterRCNN
 from torchvision.models.detection.rpn import AnchorGenerator
 
-from voc_object_detection.models.layers.AreaDependentRoIPooling import AreaDependentRoIPooling
+from models.layers.AreaDependentRoIPooling import AreaDependentRoIPooling
 
 
 def get_faster_rcnn_model(num_classes=21,

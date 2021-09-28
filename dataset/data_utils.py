@@ -2,7 +2,7 @@ import torch
 import torchvision
 from torchvision.transforms import ToTensor
 
-from voc_object_detection.dataset.ObjectDetectionDataset import ObjectDetectionDataset
+from dataset.ObjectDetectionDataset import ObjectDetectionDataset
 
 
 def collate_fn(batch):

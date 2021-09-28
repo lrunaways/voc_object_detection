@@ -19,7 +19,9 @@ def calc_tp_fp_fn_for_example(true_boxes, pred_boxes, iou_threshold, device):
 
 
 if __name__=='__main__':
-    from voc_object_detection.metrics.f1 import calc_f1
+    import sys
+    sys.path.append('..')
+    from metrics.f1 import calc_f1
     import matplotlib.pyplot as plt
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')

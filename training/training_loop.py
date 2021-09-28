@@ -1,5 +1,5 @@
 import torch
-from voc_object_detection.metrics.f1 import evaluate_f1
+from metrics.f1 import evaluate_f1
 
 def train_one_epoch(model, optimizer, train_dataloader, device):
     smoothed_metrics_dict = {}
