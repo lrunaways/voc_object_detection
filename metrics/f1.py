@@ -1,8 +1,8 @@
 import numpy as np
 import torch
 
-from metrics.metric_utils import filter_by_area, filter_by_label, nms_dict
-from metrics.calc_errors import calc_tp_fp_fn_for_example
+from voc_object_detection.metrics.metric_utils import filter_by_area, filter_by_label, nms_dict
+from voc_object_detection.metrics.calc_errors import calc_tp_fp_fn_for_example
 
 
 def calc_f1(tp_fp_map, gt_detected):
