@@ -16,4 +16,4 @@ if __name__ == '__main__':
                                   pooler='area_dependent',
                                   pooler_out_size=3)
 
-    history_dict = training_loop(model, train_dataloader, val_dataloader, n_epochs=3, labels_map=labels_map)
+    history_dict = training_loop(model, train_dataloader, val_dataloader, n_epochs=5, labels_map=labels_map)
